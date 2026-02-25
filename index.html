@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สรุปคำศัพท์และไวยากรณ์ภาษาอังกฤษ (A4)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Sarabun', sans-serif;
+            background-color: #cbd5e1; /* พื้นหลังสีเทาเพื่อให้เห็นหน้ากระดาษชัดเจน */
+            color: #1f2937;
+            margin: 0;
+            padding: 2rem 0;
+        }
+
+        /* จำลองหน้ากระดาษ A4 */
+        .a4-page {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 15mm 20mm; /* ระยะขอบกระดาษ */
+            margin: 0 auto 2rem auto;
+            background: white;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            border-radius: 4px;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        th, td {
+            border: 1px solid #e5e7eb;
+            padding: 0.5rem 0.75rem; /* ปรับ padding ให้เนื้อหาพอดีหน้า */
+            text-align: left;
+        }
+
+        th {
+            background-color: #f9fafb;
+            font-weight: 600;
+            color: #374151;
+        }
+
+        tr:nth-child(even) {
+            background-color: #fdfdfd;
+        }
+
+        .page-number {
+            position: absolute;
+            bottom: 15mm;
+            right: 20mm;
+            font-size: 0.85rem;
+            color: #6b7280;
+        }
+
+        /* การตั้งค่าสำหรับการ Print (บันทึกเป็น PDF) */
+        @media print {
+            body { 
+                background-color: white; 
+                padding: 0;
+                margin: 0;
+            }
+            .a4-page {
+                margin: 0;
+                border: none;
+                box-shadow: none;
+                border-radius: 0;
+                width: 210mm;
+                min-height: 297mm;
+                page-break-after: always; /* บังคับขึ้นหน้าใหม่เมื่อปริ้น */
+            }
+            .no-print { display: none !important; }
+            th { background-color: #f3f4f6 !important; -webkit-print-color-adjust: exact; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ปุ่ม Print ซ่อนเมื่อทำการ Print จริง -->
+    <div class="fixed top-4 right-4 z-50 no-print">
+        <button onclick="window.print()" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg shadow-lg font-medium transition-colors flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M5 4v3H4a2 2 0 00-2 2v3a2 2 0 002 2h1v2a2 2 0 002 2h6a2 2 0 002-2v-2h1a2 2 0 002-2V9a2 2 0 00-2-2h-1V4a2 2 0 00-2-2H7a2 2 0 00-2 2zm8 0H7v3h6V4zm0 8H7v4h6v-4z" clip-rule="evenodd" />
+            </svg>
+            บันทึกเป็น PDF
+        </button>
+    </div>
+
+    <!-- หน้าที่ 1 -->
+    <div class="a4-page">
+        <div class="text-center mb-6 text-indigo-900 mt-4">
+            <h1 class="text-3xl font-bold mb-2">English Vocabulary & Grammar</h1>
+            <h2 class="text-xl font-medium text-gray-600">สรุปคำศัพท์และไวยากรณ์ภาษาอังกฤษพร้อมคำอ่านและคำแปล</h2>
+        </div>
+
+        <h3 class="text-lg font-semibold mb-3 text-indigo-800 border-b-2 border-indigo-100 pb-1">1. หมวดคำศัพท์ (Vocabulary) - ส่วนที่ 1</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 30%">คำศัพท์ (English)</th>
+                    <th style="width: 35%">คำอ่าน (Pronunciation)</th>
+                    <th style="width: 35%">คำแปล (Thai)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>Patient</strong></td><td>เพช-เชินทฺ</td><td>อดทน, ผู้ป่วย</td></tr>
+                <tr><td><strong>Surgeon</strong></td><td>เซอร์-เจียน</td><td>ศัลยแพทย์</td></tr>
+                <tr><td><strong>polite</strong></td><td>โพ-ไลทฺ</td><td>สุภาพ</td></tr>
+                <tr><td><strong>transporting</strong></td><td>ทรานสฺ-พอร์ต-ทิง</td><td>การขนส่ง</td></tr>
+                <tr><td><strong>generous</strong></td><td>เจน-เนอ-รัส</td><td>ใจดี, มีน้ำใจ</td></tr>
+                <tr><td><strong>particularly</strong></td><td>พาร์-ทิ-คิว-ลาร์-ลี</td><td>โดยเฉพาะ</td></tr>
+                <tr><td><strong>because</strong></td><td>บิ-คอส</td><td>เพราะว่า</td></tr>
+                <tr><td><strong>avoid</strong></td><td>อะ-วอยดฺ</td><td>หลีกเลี่ยง</td></tr>
+                <tr><td><strong>That's why</strong></td><td>แดทสฺ-วาย</td><td>นั่นเป็นเหตุผลว่าทำไม</td></tr>
+                <tr><td><strong>ourselves</strong></td><td>เอาเออร์-เซลฟฺซ</td><td>ตัวเราเอง</td></tr>
+                <tr><td><strong>dull</strong></td><td>ดัล</td><td>น่าเบื่อ</td></tr>
+                <tr><td><strong>president</strong></td><td>เพรส-ซิ-เดินทฺ</td><td>ประธานาธิบดี</td></tr>
+                <tr><td><strong>administrative</strong></td><td>แอด-มิน-นิส-เทร-ทิฟว</td><td>การบริหาร</td></tr>
+                <tr><td><strong>Democratic party</strong></td><td>เด-โม-แครต-ทิก พาร์-ที</td><td>พรรคเดโมแครต</td></tr>
+                <tr><td><strong>experiment</strong></td><td>เอ็กซฺ-เพอ-ริ-เมินทฺ</td><td>การทดลอง</td></tr>
+                <tr><td><strong>politician</strong></td><td>พอ-ลิ-ทิ-เชียน</td><td>นักการเมือง</td></tr>
+                <tr><td><strong>creativity</strong></td><td>ครี-เอ-ทิ-วิ-ที</td><td>ความคิดสร้างสรรค์</td></tr>
+                <tr><td><strong>below</strong></td><td>บิ-โลว</td><td>ด้านล่าง</td></tr>
+                <tr><td><strong>popsicles</strong></td><td>พอพ-ซิ-เคิลซ</td><td>ไอศกรีมแท่ง</td></tr>
+                <tr><td><strong>memorable</strong></td><td>เมม-เมอ-ระ-เบิล</td><td>น่าจดจำ</td></tr>
+                <tr><td><strong>their</strong></td><td>แดร์</td><td>ของพวกมัน, ของพวกเขา</td></tr>
+                <tr><td><strong>parties</strong></td><td>พาร์-ทีซ</td><td>งานเลี้ยง</td></tr>
+                <tr><td><strong>them</strong></td><td>เดม</td><td>พวกมัน, พวกเขา</td></tr>
+                <tr><td><strong>crowded</strong></td><td>คราวดฺ-เด็ด</td><td>ฝูงชน, หนาแน่น</td></tr>
+                <tr><td><strong>appearance</strong></td><td>แอพ-เพีย-เรินซฺ</td><td>รูปลักษณ์, รูปร่าง</td></tr>
+            </tbody>
+        </table>
+        <div class="page-number">หน้า 1</div>
+    </div>
+
+    <!-- หน้าที่ 2 -->
+    <div class="a4-page">
+        <h3 class="text-lg font-semibold mb-3 text-indigo-800 border-b-2 border-indigo-100 pb-1 mt-4">1. หมวดคำศัพท์ (Vocabulary) - ส่วนที่ 2</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 30%">คำศัพท์ (English)</th>
+                    <th style="width: 35%">คำอ่าน (Pronunciation)</th>
+                    <th style="width: 35%">คำแปล (Thai)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>themselves</strong></td><td>เดม-เซลฟฺซ</td><td>ตัวพวกเขาเอง</td></tr>
+                <tr><td><strong>an employee</strong></td><td>แอน เอ็ม-พลอย-ยี</td><td>พนักงาน 1 คน</td></tr>
+                <tr><td><strong>escaped</strong></td><td>เอส-เคปดฺ</td><td>หนี</td></tr>
+                <tr><td><strong>arranged</strong></td><td>อะ-เรนจดฺ</td><td>จัดเตรียม</td></tr>
+                <tr><td><strong>enormous</strong></td><td>อี-นอร์-มัส</td><td>มหาศาล</td></tr>
+                <tr><td><strong>reservation</strong></td><td>เรส-เซอร์-เว-เชิน</td><td>การจอง</td></tr>
+                <tr><td><strong>presidency</strong></td><td>เพรส-ซิ-เดน-ซี</td><td>ตำแหน่งประธานาธิบดี</td></tr>
+                <tr><td><strong>receptionist</strong></td><td>รี-เซพ-เชิน-นิสทฺ</td><td>พนักงานต้อนรับ</td></tr>
+                <tr><td><strong>annoyed</strong></td><td>แอน-นอยดฺ</td><td>รำคาญ</td></tr>
+                <tr><td><strong>exist</strong></td><td>เอ็ก-ซิสทฺ</td><td>มีอยู่</td></tr>
+                <tr><td><strong>get a career</strong></td><td>เก็ท อะ คะ-เรียร์</td><td>เริ่มทำงาน, มีอาชีพ</td></tr>
+                <tr><td><strong>appearing</strong></td><td>แอพ-เพียร์-ริง</td><td>ปรากฏ</td></tr>
+                <tr><td><strong>get engaged</strong></td><td>เก็ท เอน-เกจดฺ</td><td>หมั้น</td></tr>
+                <tr><td><strong>ancient</strong></td><td>เอน-เชียนทฺ</td><td>โบราณ</td></tr>
+                <tr><td><strong>early</strong></td><td>เออร์-ลี</td><td>ก่อน, แต่เช้า</td></tr>
+                <tr><td><strong>unusual</strong></td><td>อัน-ยู-ชวล</td><td>ไม่ปกติ</td></tr>
+                <tr><td><strong>embarrassed</strong></td><td>เอม-บาร์-รัสทฺ</td><td>เขินอาย, อับอาย</td></tr>
+                <tr><td><strong>poor thing</strong></td><td>พัวร์ ธิง</td><td>น่าสงสาร, สิ่งเลวร้าย</td></tr>
+                <tr><td><strong>tourist</strong></td><td>ทัว-ริสทฺ</td><td>นักท่องเที่ยว</td></tr>
+                <tr><td><strong>traveler</strong></td><td>ทรา-เวล-เลอร์</td><td>นักเดินทาง</td></tr>
+                <tr><td><strong>downtown</strong></td><td>ดาวน์-ทาวน์</td><td>ใจกลางเมือง</td></tr>
+                <tr><td><strong>accountant</strong></td><td>อะ-เคาน์-เทินทฺ</td><td>นักบัญชี</td></tr>
+                <tr><td><strong>journalist</strong></td><td>เจอร์-นัล-ลิสทฺ</td><td>นักข่าว</td></tr>
+            </tbody>
+        </table>
+
+        <h3 class="text-lg font-semibold mb-3 text-indigo-800 border-b-2 border-indigo-100 pb-1 mt-6">2. หมวดคำศัพท์บอกเวลาและกริยา (Time Expressions & Verbs)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 30%">คำศัพท์ (English)</th>
+                    <th style="width: 35%">คำอ่าน (Pronunciation)</th>
+                    <th style="width: 35%">คำแปล (Thai)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>right now</strong></td><td>ไรทฺ นาว</td><td>ตอนนี้</td></tr>
+                <tr><td><strong>at the moment</strong></td><td>แอท เดอะ โม-เมินทฺ</td><td>ในขณะนี้</td></tr>
+                <tr><td><strong>this year</strong></td><td>ดิส เยียร์</td><td>ปีนี้</td></tr>
+                <tr><td><strong>everyday</strong></td><td>เอฟ-วรี-เดย์</td><td>ทุกวัน</td></tr>
+                <tr><td><strong>yesterday</strong></td><td>เยส-เทอร์-เดย์</td><td>เมื่อวานนี้</td></tr>
+                <tr><td><strong>last night/week/month...</strong></td><td>ลาสทฺ ไนทฺ/วีค/มันธฺ...</td><td>คืนที่แล้ว/สัปดาห์ที่แล้ว/...</td></tr>
+                <tr><td><strong>the day after tomorrow</strong></td><td>เดอะ เดย์ อาฟ-เทอร์ ทู-มอร์-โรว</td><td>มะรืนนี้</td></tr>
+                <tr><td><strong>tonight</strong></td><td>ทู-ไนทฺ</td><td>คืนนี้</td></tr>
+                <tr><td><strong>probably</strong></td><td>พรอบ-บะ-บลี</td><td>อาจจะ</td></tr>
+                <tr><td><strong>believe</strong></td><td>บิ-ลีฟว</td><td>เชื่อ</td></tr>
+                <tr><td><strong>forget</strong></td><td>ฟอร์-เก็ท</td><td>ลืม</td></tr>
+                <tr><td><strong>prefer</strong></td><td>พรี-เฟอร์</td><td>ชอบมากกว่า</td></tr>
+            </tbody>
+        </table>
+        <div class="page-number">หน้า 2</div>
+    </div>
+
+    <!-- หน้าที่ 3 -->
+    <div class="a4-page">
+        <h3 class="text-lg font-semibold mb-3 text-indigo-800 border-b-2 border-indigo-100 pb-1 mt-4">3. หมวดประโยคตัวอย่าง (Example Sentences)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 45%">ประโยคภาษาอังกฤษ</th>
+                    <th style="width: 30%">คำอ่าน (Pronunciation)</th>
+                    <th style="width: 25%">คำแปล (Thai)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>I bought... yesterday.</strong></td><td>ไอ บอท... เยส-เทอร์-เดย์</td><td>ฉันซื้อ... เมื่อวานนี้</td></tr>
+                <tr><td><strong>I didn't go last week.</strong></td><td>ไอ ดิด-ดึนทฺ โก ลาสทฺ วีค</td><td>ฉันไม่ได้ไปเมื่อสัปดาห์ที่แล้ว</td></tr>
+                <tr><td><strong>I was watching TV at 6 last night.</strong></td><td>ไอ วอส วอท-ชิง ทีวี แอท ซิกซฺ ลาสทฺ ไนทฺ</td><td>ฉันกำลังดูทีวีตอน 6 โมงเมื่อคืนนี้</td></tr>
+                <tr><td><strong>We were walking home when it started to rain.</strong></td><td>วี เวอร์ วอล์ก-กิง โฮม เวน อิท สตาร์ท-เท็ด ทู เรน</td><td>พวกเรากำลังเดินกลับบ้านตอนที่ฝนเริ่มตก</td></tr>
+                <tr><td><strong>Was she walking at this office when you met her?</strong></td><td>วอส ชี วอล์ก-กิง แอท ดิส ออฟ-ฟิศ เวน ยู เมท เฮอร์</td><td>เธอกำลังเดินอยู่ที่ออฟฟิศนี้หรือเปล่าตอนที่คุณเจอเธอ?</td></tr>
+                <tr><td><strong>Helen's taller than Jason.</strong></td><td>เฮ-เลนซ ทอล-เลอร์ แดน เจ-สัน</td><td>เฮเลนสูงกว่าเจสัน</td></tr>
+                <tr><td><strong>The subway is less expensive than the train.</strong></td><td>เดอะ ซับ-เวย์ อีส เลส เอ็กซฺ-เพน-ซีฟว แดน เดอะ เทรน</td><td>รถไฟใต้ดินราคาถูกกว่ารถไฟ</td></tr>
+                <tr><td><strong>The train is more expensive than the bus.</strong></td><td>เดอะ เทรน อีส มอร์ เอ็กซฺ-เพน-ซีฟว แดน เดอะ บัส</td><td>รถไฟราคาแพงกว่ารถบัส</td></tr>
+                <tr><td><strong>Sofia is as tall as Jasmin.</strong></td><td>โซ-เฟีย อีส แอส ทอล แอส จัสมิน</td><td>โซเฟียสูงเท่ากับจัสมิน</td></tr>
+                <tr><td><strong>The bus isn't as expensive as the train.</strong></td><td>เดอะ บัส อีส-ซึนทฺ แอส เอ็กซฺ-เพน-ซีฟว แอส เดอะ เทรน</td><td>รถบัสราคาไม่แพงเท่ารถไฟ</td></tr>
+                <tr><td><strong>I bought the most / least expensive phone.</strong></td><td>ไอ บอท เดอะ โมสทฺ / ลีสทฺ เอ็กซฺ-เพน-ซีฟว โฟน</td><td>ฉันซื้อโทรศัพท์ที่แพงที่สุด/ถูกที่สุด</td></tr>
+                <tr><td><strong>This is the fastest car in the world.</strong></td><td>ดิส อีส เดอะ ฟาส-เทสทฺ คาร์ อิน เดอะ เวิลด์</td><td>นี่คือรถที่เร็วที่สุดในโลก</td></tr>
+                <tr><td><strong>Are you going swimming tonight?</strong></td><td>อาร์ ยู โก-อิง สวิม-มิง ทู-ไนทฺ</td><td>คืนนี้คุณจะไปว่ายน้ำไหม?</td></tr>
+                <tr><td><strong>Are you going to go swimming tonight?</strong></td><td>อาร์ ยู โก-อิง ทู โก สวิม-มิง ทู-ไนทฺ</td><td>คืนนี้คุณตั้งใจจะไปว่ายน้ำไหม?</td></tr>
+            </tbody>
+        </table>
+        <div class="page-number">หน้า 3</div>
+    </div>
+
+</body>
+</html>
+
+
